@@ -232,8 +232,8 @@ class LalamoveApi
   public function cancelOrder($orderId)
   {
     $request = new Request();
-    $request->method = "PUT";
-    $request->path = "/v3/orders/".$orderId."/cancel";
+    $request->method = "DELETE";
+    $request->path = "/v3/orders/".$orderId;
     $request->host = $this->host;
     $request->key = $this->key;
     $request->secret = $this->secret;
